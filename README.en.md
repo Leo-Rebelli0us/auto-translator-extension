@@ -21,6 +21,21 @@ This is a Manifest V3 browser extension for quickly translating selected text on
 - Provides an options page for API fields, language settings, cache, context menu, shortcut, and behavior toggles.
 - Includes `zh_CN` and `en` extension name and description locales.
 
+## Installation
+
+### Chrome / Edge
+
+1. Open the extension management page:
+   - Chrome: `chrome://extensions/`
+   - Edge: `edge://extensions/`
+2. Enable "Developer mode".
+3. Click "Load unpacked".
+4. Select the folder that contains `manifest.json`.
+
+### Firefox
+
+This project currently uses Manifest V3 and `chrome.*` APIs, so it primarily targets Chrome and Edge. Firefox compatibility should be verified against the target Firefox version before publishing.
+
 ## Demo Screenshots
 
 ### 1. Extension icon appears after selecting text
@@ -89,21 +104,6 @@ auto-translator-extension/
 ├── package.json               # Optional ZIP packaging scripts
 └── .gitignore                 # Git ignore rules
 ```
-
-## Installation
-
-### Chrome / Edge
-
-1. Open the extension management page:
-   - Chrome: `chrome://extensions/`
-   - Edge: `edge://extensions/`
-2. Enable "Developer mode".
-3. Click "Load unpacked".
-4. Select the folder that contains `manifest.json`.
-
-### Firefox
-
-This project currently uses Manifest V3 and `chrome.*` APIs, so it primarily targets Chrome and Edge. Firefox compatibility should be verified against the target Firefox version before publishing.
 
 ## Usage
 

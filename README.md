@@ -21,6 +21,21 @@
 - 支持选项页保存 API、语言、缓存、右键菜单、快捷键等配置。
 - 支持 `zh_CN` 和 `en` 两套扩展名称与描述。
 
+## 安装方法
+
+### Chrome / Edge
+
+1. 打开扩展管理页面：
+   - Chrome：`chrome://extensions/`
+   - Edge：`edge://extensions/`
+2. 开启“开发者模式”。
+3. 点击“加载已解压的扩展程序”。
+4. 选择包含 `manifest.json` 的项目目录。
+
+### Firefox
+
+当前项目使用 Manifest V3 和 `chrome.*` API，主要面向 Chrome / Edge。Firefox 支持情况需要结合目标版本测试确认。
+
 ## 演示截图
 
 ### 1. 选中目标后会弹出扩展图标
@@ -89,21 +104,6 @@
 ├── package.json               # 可选：压缩打包脚本
 └── .gitignore                 # Git 忽略规则
 ```
-
-## 安装方法
-
-### Chrome / Edge
-
-1. 打开扩展管理页面：
-   - Chrome：`chrome://extensions/`
-   - Edge：`edge://extensions/`
-2. 开启“开发者模式”。
-3. 点击“加载已解压的扩展程序”。
-4. 选择包含 `manifest.json` 的项目目录。
-
-### Firefox
-
-当前项目使用 Manifest V3 和 `chrome.*` API，主要面向 Chrome / Edge。Firefox 支持情况需要结合目标版本测试确认。
 
 ## 使用方法
 
