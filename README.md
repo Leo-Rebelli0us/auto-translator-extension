@@ -69,6 +69,7 @@
 ├── README.en.md               # 英文项目说明
 ├── TESTING.md                 # 手动测试清单
 ├── 使用教程.md                # 用户使用教程
+├── LICENSE                    # MIT 开源许可证
 ├── package.json               # 可选：压缩打包脚本
 └── .gitignore                 # Git 忽略规则
 ```
@@ -99,6 +100,7 @@
 | `README.en.md` | 英文项目首页说明 |
 | `使用教程.md` | 面向普通用户的安装和使用说明 |
 | `TESTING.md` | 手动测试清单 |
+| `LICENSE` | MIT 开源许可证 |
 | `package.json` | 可选压缩打包脚本 |
 | `.gitignore` | 避免提交临时文件、依赖目录和构建产物 |
 
@@ -198,4 +200,4 @@ npm run build:firefox
 
 ## 许可证
 
-当前 README 沿用原项目的 MIT License 说明。正式开源前，建议补充独立的 `LICENSE` 文件。
+本项目使用 MIT License，详见 `LICENSE` 文件。

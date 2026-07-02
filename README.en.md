@@ -69,6 +69,7 @@ auto-translator-extension/
 ├── README.en.md               # English project documentation
 ├── TESTING.md                 # Manual test checklist
 ├── 使用教程.md                # Chinese user guide
+├── LICENSE                    # MIT open source license
 ├── package.json               # Optional ZIP packaging scripts
 └── .gitignore                 # Git ignore rules
 ```
@@ -99,6 +100,7 @@ Recommended files for GitHub publishing:
 | `README.en.md` | English GitHub project overview |
 | `使用教程.md` | Chinese user guide |
 | `TESTING.md` | Manual testing checklist |
+| `LICENSE` | MIT open source license |
 | `package.json` | Optional packaging scripts |
 | `.gitignore` | Keeps temporary files, dependencies, and build outputs out of Git |
 
@@ -198,4 +200,4 @@ The `github/` directory contains the source and documentation files prepared for
 
 ## License
 
-This README keeps the original MIT License note. Before publishing as an open source project, consider adding a standalone `LICENSE` file.
+This project is licensed under the MIT License. See `LICENSE` for details.
