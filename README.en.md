@@ -21,6 +21,20 @@ This is a Manifest V3 browser extension for quickly translating selected text on
 - Provides an options page for API fields, language settings, cache, context menu, shortcut, and behavior toggles.
 - Includes `zh_CN` and `en` extension name and description locales.
 
+## Demo Screenshots
+
+### 1. Extension icon appears after selecting text
+
+![Extension icon appears after selecting text](assets/demo/selection-trigger-icon.png)
+
+### 2. Single-word translation
+
+![Single-word translation](assets/demo/single-word-translation.png)
+
+### 3. Paragraph translation
+
+![Paragraph translation](assets/demo/paragraph-translation.png)
+
 ## Tech Stack
 
 - Manifest V3
@@ -65,6 +79,8 @@ auto-translator-extension/
 ├── _locales/
 │   ├── zh_CN/messages.json    # Chinese extension name and description
 │   └── en/messages.json       # English extension name and description
+├── assets/
+│   └── demo/                   # README demo screenshots
 ├── README.md                  # Chinese project documentation
 ├── README.en.md               # English project documentation
 ├── TESTING.md                 # Manual test checklist
@@ -73,47 +89,6 @@ auto-translator-extension/
 ├── package.json               # Optional ZIP packaging scripts
 └── .gitignore                 # Git ignore rules
 ```
-
-## Required Runtime Files
-
-These files are required for the browser extension to load and run correctly:
-
-| Path | Required | Purpose |
-| --- | --- | --- |
-| `manifest.json` | Yes | Declares extension permissions, entries, content scripts, popup, options page, and icons |
-| `background/background.js` | Yes | Handles translation requests, caching, settings, and context menu setup |
-| `content_scripts/content.js` | Yes | Injects page behavior, listens for selected text, and displays translation UI |
-| `content_scripts/content.css` | Yes | Styles the in-page trigger button and translation popup |
-| `popup/popup.html` | Yes | Toolbar popup structure |
-| `popup/popup.css` | Yes | Toolbar popup styles |
-| `popup/popup.js` | Yes | Toolbar popup translation, copy, speech, and settings logic |
-| `options/options.html` | Yes | Options page structure |
-| `options/options.js` | Yes | Options page settings save, reset, and API test logic |
-| `icons/*.png` | Yes | Extension icons |
-| `_locales/*/messages.json` | Yes | Locale messages used by `__MSG_appName__` and `__MSG_appDesc__` in `manifest.json` |
-
-Recommended files for GitHub publishing:
-
-| Path | Purpose |
-| --- | --- |
-| `README.md` | Chinese GitHub project overview |
-| `README.en.md` | English GitHub project overview |
-| `使用教程.md` | Chinese user guide |
-| `TESTING.md` | Manual testing checklist |
-| `LICENSE` | MIT open source license |
-| `package.json` | Optional packaging scripts |
-| `.gitignore` | Keeps temporary files, dependencies, and build outputs out of Git |
-
-Not recommended for the GitHub publishing folder:
-
-| Path | Reason |
-| --- | --- |
-| `.git/` | Local Git repository metadata |
-| `.superpowers/` | Local agent workspace data |
-| `.worktrees/` | Local worktrees and generated archives |
-| `docs/superpowers/` | Process documents that are not required for installing or running the extension |
-| `node_modules/` | Dependencies are not required by the current project |
-| `dist/`, `build/`, `*.zip` | Generated artifacts that can be rebuilt when needed |
 
 ## Installation
 

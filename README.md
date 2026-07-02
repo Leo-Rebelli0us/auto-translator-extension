@@ -21,6 +21,20 @@
 - 支持选项页保存 API、语言、缓存、右键菜单、快捷键等配置。
 - 支持 `zh_CN` 和 `en` 两套扩展名称与描述。
 
+## 演示截图
+
+### 1. 选中目标后会弹出扩展图标
+
+![选中目标后会弹出扩展图标](assets/demo/selection-trigger-icon.png)
+
+### 2. 支持单一词语翻译
+
+![支持单一词语翻译](assets/demo/single-word-translation.png)
+
+### 3. 支持整段文字翻译
+
+![支持整段文字翻译](assets/demo/paragraph-translation.png)
+
 ## 技术栈
 
 - Manifest V3
@@ -65,6 +79,8 @@
 ├── _locales/
 │   ├── zh_CN/messages.json    # 中文扩展名称和描述
 │   └── en/messages.json       # 英文扩展名称和描述
+├── assets/
+│   └── demo/                   # README 演示截图
 ├── README.md                  # 项目说明
 ├── README.en.md               # 英文项目说明
 ├── TESTING.md                 # 手动测试清单
@@ -73,47 +89,6 @@
 ├── package.json               # 可选：压缩打包脚本
 └── .gitignore                 # Git 忽略规则
 ```
-
-## 必需文件清单
-
-以下文件是插件能被浏览器正常加载和运行的必需代码：
-
-| 路径 | 是否必需 | 作用 |
-| --- | --- | --- |
-| `manifest.json` | 必需 | 声明扩展权限、入口、内容脚本、弹窗、设置页和图标 |
-| `background/background.js` | 必需 | 处理翻译请求、缓存结果、管理配置、创建右键菜单 |
-| `content_scripts/content.js` | 必需 | 注入网页，监听选中文本并展示翻译交互 |
-| `content_scripts/content.css` | 必需 | 提供网页内触发按钮和翻译弹窗样式 |
-| `popup/popup.html` | 必需 | 工具栏弹窗页面结构 |
-| `popup/popup.css` | 必需 | 工具栏弹窗样式 |
-| `popup/popup.js` | 必需 | 工具栏弹窗的翻译、复制、发音、配置联动逻辑 |
-| `options/options.html` | 必需 | 扩展设置页面结构 |
-| `options/options.js` | 必需 | 设置页配置保存、恢复默认、API 测试逻辑 |
-| `icons/*.png` | 必需 | 浏览器扩展图标 |
-| `_locales/*/messages.json` | 必需 | `manifest.json` 中 `__MSG_appName__` 和 `__MSG_appDesc__` 的本地化来源 |
-
-建议一起发布到 GitHub 的辅助文件：
-
-| 路径 | 作用 |
-| --- | --- |
-| `README.md` | GitHub 项目首页说明 |
-| `README.en.md` | 英文项目首页说明 |
-| `使用教程.md` | 面向普通用户的安装和使用说明 |
-| `TESTING.md` | 手动测试清单 |
-| `LICENSE` | MIT 开源许可证 |
-| `package.json` | 可选压缩打包脚本 |
-| `.gitignore` | 避免提交临时文件、依赖目录和构建产物 |
-
-不建议放入 GitHub 发布目录：
-
-| 路径 | 原因 |
-| --- | --- |
-| `.git/` | 本地 Git 仓库元数据 |
-| `.superpowers/` | 本地代理工作资料 |
-| `.worktrees/` | 本地工作树和压缩产物 |
-| `docs/superpowers/` | 过程设计文档，不影响插件安装运行 |
-| `node_modules/` | 当前项目不需要依赖目录 |
-| `dist/`、`build/`、`*.zip` | 构建或压缩产物，可按需重新生成 |
 
 ## 安装方法
 
