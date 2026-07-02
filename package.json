@@ -1,0 +1,9 @@
+{
+  "name": "auto-translator-extension",
+  "version": "1.0.0",
+  "description": "Auto text translator browser extension",
+  "scripts": {
+    "build:chrome": "zip -r auto-translator-chrome.zip . -x '*.git*' 'node_modules/*' '*.md' 'package.json'",
+    "build:firefox": "zip -r auto-translator-firefox.zip . -x '*.git*' 'node_modules/*' '*.md' 'package.json'"
+  }
+}

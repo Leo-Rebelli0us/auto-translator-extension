@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "Auto Text Translator",
+    "description": "Application name"
+  },
+  "appDesc": {
+    "message": "Automatically translate selected text to Chinese on web pages",
+    "description": "Application description"
+  }
+}

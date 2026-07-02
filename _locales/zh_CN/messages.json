@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "自动划词翻译",
+    "description": "应用名称"
+  },
+  "appDesc": {
+    "message": "在网页上选择文本时自动翻译为中文",
+    "description": "应用描述"
+  }
+}
